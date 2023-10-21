@@ -4,10 +4,18 @@
     <title><%= title %></title>
     <%- include('./partials/lib.ejs') %>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
   </head>
   <body>
     <div class="bg-image">
       <%- include('./partials/navbar.ejs') %>
+      <div class="row">
+        <div class="col-sm-3 welcome-container">
+          <h1 class="w-txt"><span class="heighlight">Welcome</span> to <span class="heighlight">MathPlatform</span></h1>
+          <hr>
+          <p>Here you can calculate area and volume.</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

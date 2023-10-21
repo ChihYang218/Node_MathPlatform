@@ -1,6 +1,5 @@
 body {
   font-family: 'Noto Serif TC', serif;
-  text-align: center;
 }
 
 .badge {
@@ -16,4 +15,5 @@ body {
   background-size: cover;
   /* 當前螢幕可見高度的100% */
   height: 100vh;
+  opacity: 0.9;
 }
