@@ -14,6 +14,33 @@ body {
   /* 使背景圖不靠repeat，占滿整個內容版面 */
   background-size: cover;
   /* 當前螢幕可見高度的100% */
-  height: 100vh;
+  height: 300vh;
   opacity: 0.9;
+}
+
+.col2
+{
+  background-color: rgba(135, 132, 132, 0.88) !important;
+  height: 500px;
+  margin: 7vh 5vh;
+  border-radius: 50px;
+  padding-top: 20px;
+}
+
+.ti
+{
+  padding: 10px 30px 0px 30px;
+  font-size: 45px;
+  font-weight:900;
+  color:rgb(0, 0, 132);
+}
+
+.col1
+{
+  padding: 100px 0px 10px 0px;
+}
+
+hr
+{
+  border-top:5px dashed #000000ee;
 }
