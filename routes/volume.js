@@ -32,4 +32,15 @@ router.post('/r', (req, res) => {
   res.send({area: area});
 })
 
+router.post('/c', (req, res) => {
+  let num = req.body.num;
+  let area;
+
+  num = parseFloat(num);
+  area = num * Math.PI * Math.PI;
+  area = area.toFixed(7);
+
+  res.send({area: area});
+})
+
 module.exports = router;

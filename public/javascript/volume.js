@@ -63,6 +63,29 @@ $(function() {
     else if(shape == 'c')
     {
       document.getElementById('volume-init').innerHTML = "<div class='col3'><table><tr><th>圓半徑長(cm): </th><td><div class='form-outline' style='width: 10rem;'><input step='0.01' value='0.00' type='number' id='number1' class='form-control' /></div></td></tr><tr><th>體積(cm³): </th><td><div class='form-outline' style='width: 10rem;'><input type='text' class='form-control' placeholder='等待結果' id='result'></div></td></tr></table><button type='button' class='btn btn-warning btn-lg fnchoice' id='countBtn-volume'>計算體積</button></div>";
+      $('#countBtn-volume').click(() => {
+        let num = $('#number1').val();
+        if(num == '')
+        {
+          alert('請輸入計算值！');
+          return;
+        }
+        let buffer = parseFloat(num);
+        if(buffer < 0)
+        {
+          alert('請輸入正數！');
+          return;
+        }
+        $.ajax({
+          url: '/volume/c',
+          method: 'POST',
+          data: {num: num},
+          datatype: 'json',
+          success: (data) => {
+            $('#result').val(data.area);
+          }
+        });
+      })
     }
     else
     {
