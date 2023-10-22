@@ -6,6 +6,15 @@ $(function() {
     if(shape == 's')
     {
       document.getElementById('area-init').innerHTML = "<div class='col3'><table><tr><th>邊長(cm): </th><td><div class='form-outline' style='width: 10rem;'><input step='0.01' value='0.00' type='number' id='number1' class='form-control' /></div></td></tr><tr><th>面積(cm²): </th><td><div class='form-outline' style='width: 10rem;'><input type='text' class='form-control' placeholder='等待結果' id='result'></div></td></tr></table><button type='button' class='btn btn-warning btn-lg fnchoice' id='countBtn-area'>計算面積</button></div>";
+      $('#countBtn-area').click(() => {
+        let num = $('#number1').val();
+        $.post(
+          '/area/s/' + num,
+          (data) => {
+            $('#result').val(data.area);
+          }
+        );
+      })
     }
     else if(shape == 'r')
     {
@@ -21,5 +30,7 @@ $(function() {
       alert('請先選擇圖形！');
       return;
     }
+
+
   });
 })
