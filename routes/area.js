@@ -31,7 +31,7 @@ router.post('/c/:num', (req, res) => {
   let num = req.params.num;
   let area;
   num = parseFloat(num);
-  area = num*Math.PI;
+  area = Math.pow(num, 2)*Math.PI;
   area = area.toFixed(7);
 
   res.send({area: area});
