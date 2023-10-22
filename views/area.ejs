@@ -24,36 +24,16 @@
               <label class="mr-sm-2 sr-only choice-txt" for="choiceShape-area">選擇圖形： </label>
               <select class="custom-select mr-sm-2" id="choiceShape-area">
                 <option selected>形狀...</option>
-                <option value="1">正方形</option>
-                <option value="2">長方形</option>
-                <option value="3">圓形</option>
+                <option value="s">正方形</option>
+                <option value="r">長方形</option>
+                <option value="c">圓形</option>
               </select>
               <br>
               <button type="button" class="btn btn-warning btn-lg fnchoice" id="choiceFinishBtn-area">選擇完成</button>
             </div>
           </div>
-          <div class="col-sm-4 text-center">
-            <div class="col3">
-              <table>
-                <tr>
-                  <th>圓半徑長(cm): </th>
-                  <td>
-                    <div class="form-outline" style="width: 10rem;">
-                      <input step="0.01" value="0.00" type="number" id="number1" class="form-control" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>面積(cm²): </th>
-                  <td>
-                    <div class="form-outline" style="width: 10rem;">
-                      <input type="text" class="form-control" placeholder="等待結果" id="result">
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              <button type="button" class="btn btn-warning btn-lg fnchoice" id="countBtn-area">計算面積</button>
-            </div>
+          <div class="col-sm-4 text-center" id="area-init">
+            <!-- js 會在這裡導入該有的介面 -->
           </div>
         </div>
       </div>
