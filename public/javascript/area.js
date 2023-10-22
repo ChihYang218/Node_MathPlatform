@@ -19,6 +19,16 @@ $(function() {
     else if(shape == 'r')
     {
       document.getElementById('area-init').innerHTML = "<div class='col3'><table><tr><th>長(cm): </th><td><div class='form-outline' style='width: 10rem;'><input step='0.01' value='0.00' type='number' id='number1' class='form-control' /></div></td></tr><tr><th>寬(cm): </th><td><div class='form-outline' style='width: 10rem;'><input step='0.01' value='0.00' type='number' id='number2' class='form-control' /></div></td></tr><tr><th>面積(cm²): </th><td><div class='form-outline' style='width: 10rem;'><input type='text' class='form-control' placeholder='等待結果' id='result'></div></td></tr></table><button type='button' class='btn btn-warning btn-lg fnchoice' id='countBtn-area'>計算面積</button></div>";
+      $('#countBtn-area').click(() => {
+        let num1 = $('#number1').val();
+        let num2 = $('#number2').val();
+        $.post(
+          '/area/r/' + num1 + '/' + num2,
+          (data) => {
+            $('#result').val(data.area);
+          }
+        );
+      })
     }
     else if(shape == 'c')
     {
