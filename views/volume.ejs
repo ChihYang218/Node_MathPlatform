@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <%- include('./partials/lib.ejs') %>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer src="/javascript/volume.js"></script>
   </head>
   <body>
     <div class="bg-image">
@@ -20,8 +21,8 @@
           </div>
           <div class="col-sm-4 text-center">
             <div class="col2">
-              <label class="mr-sm-2 sr-only choice-txt" for="inlineFormCustomSelect">選擇圖形： </label>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <label class="mr-sm-2 sr-only choice-txt" for="choiceShape-volume">選擇圖形： </label>
+              <select class="custom-select mr-sm-2" id="choiceShape-volume">
                 <option selected>形狀...</option>
                 <option value="1">正方體</option>
                 <option value="2">長方體</option>
@@ -32,7 +33,27 @@
             </div>
           </div>
           <div class="col-sm-4 text-center">
-      
+            <div class="col3">
+              <table>
+                <tr>
+                  <th>圓半徑長(cm): </th>
+                  <td>
+                    <div class="form-outline" style="width: 10rem;">
+                      <input step="0.01" value="0.00" type="number" id="number1" class="form-control" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>體積(cm³): </th>
+                  <td>
+                    <div class="form-outline" style="width: 10rem;">
+                      <input type="text" class="form-control" placeholder="等待結果" id="result">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-warning btn-lg fnchoice" id="countBtn-area">計算面積</button>
+            </div>
           </div>
         </div>
       </div>

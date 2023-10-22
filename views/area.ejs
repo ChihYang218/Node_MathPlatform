@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <%- include('./partials/lib.ejs') %>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer src="/javascript/area.js"></script>
   </head>
   <body>
     <div class="bg-image">
@@ -20,8 +21,8 @@
           </div>
           <div class="col-sm-4 text-center">
             <div class="col2">
-              <label class="mr-sm-2 sr-only choice-txt" for="inlineFormCustomSelect">選擇圖形： </label>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <label class="mr-sm-2 sr-only choice-txt" for="choiceShape-area">選擇圖形： </label>
+              <select class="custom-select mr-sm-2" id="choiceShape-area">
                 <option selected>形狀...</option>
                 <option value="1">正方形</option>
                 <option value="2">長方形</option>
@@ -35,18 +36,10 @@
             <div class="col3">
               <table>
                 <tr>
-                  <th>長(cm): </th>
+                  <th>圓半徑長(cm): </th>
                   <td>
                     <div class="form-outline" style="width: 10rem;">
                       <input step="0.01" value="0.00" type="number" id="number1" class="form-control" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>寬(cm): </th>
-                  <td>
-                    <div class="form-outline" style="width: 10rem;">
-                      <input step="0.01" value="0.00" type="number" id="number2" class="form-control" />
                     </div>
                   </td>
                 </tr>
