@@ -11,10 +11,10 @@ body {
   background-image: url('/image/bg.jpg');
   /* 正中間，配合這個縮放才不會怪怪的 */
   background-position: center center;
-  /* 使背景圖不靠repeat，占滿整個內容版面 */
+  /* 使背景圖看視窗，占滿整個內容版面 */
   background-size: cover;
-  /* 當前螢幕可見高度的100% */
-  height: 300vh;
+  /* 當前視窗可見高度的100% */
+  height: 180vh;
   opacity: 0.9;
 }
 
@@ -48,4 +48,27 @@ hr
 .fnchoice
 {
   margin-top: 50px;
+}
+
+.col3
+{
+  background-color: rgba(110, 109, 109, 0.774) !important;
+  height: 600px;
+  margin: 7vh 5vh;
+  border-radius: 50px;
+  padding-top: 80px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table tr {
+  height: 100px;
+}
+
+.choice-txt, table th {
+  color:rgb(0, 0, 132);
+  font-size: 22px;
+  font-weight: bold;
 }
