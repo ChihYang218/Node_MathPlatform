@@ -11,10 +11,10 @@ body {
   background-image: url('/image/bg.jpg');
   /* 正中間，配合這個縮放才不會怪怪的 */
   background-position: center center;
-  /* 使背景圖看視窗，占滿整個內容版面 */
-  background-size: cover;
-  /* 當前視窗可見高度的100% */
-  height: 250vh;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  /* 當前視窗可見高度的90% */
   opacity: 0.9;
 }
 
